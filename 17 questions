@@ -1,0 +1,423 @@
+
+//rotate matrix or 2d array
+/*
+public class Basics{
+    public static void rotatematrix(int arr[][],int ans[][]){
+        for(int i=0 ;i<arr.length; i++){ //row
+            for(int j=0;j<arr[0].length;j++){ //column
+                ans[j][ans.length-i-1]= arr[i][j];
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int arr[][] = { {1,2,3,4},
+                        {5,6,7,8},
+                        {9,10,11,12},
+                        {13,14,15,16}
+                      };
+        int ans[][] = new int[4][4];
+        rotatematrix(arr,ans);
+        for(int i=0 ;i<arr.length; i++){ //row
+            for(int j=0;j<arr[0].length;j++){ //column
+                System.out.print(ans[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+*/
+    
+    
+//Find number positive and smaller than k in array
+
+/*
+import java.util.Scanner;
+public class Basics{
+
+    public static void findvalues(int arr[],int k){
+        for(int i=0; i<arr.length ; i++){
+            if(arr[i]>=0 && arr[i]<k){
+                System.out.print(arr[i] + " ");
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int arr[] = {5,8,-1,4,0,1};
+        int k=2;
+        findvalues(arr,k);
+
+    }
+}
+*/ 
+        
+//Print the sum of all even and odd numbers seperately
+
+//without range,asking from user
+
+/* 
+import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int evensum=0;
+        int oddsum=0;
+        System.out.println("Please enter array size");
+        int n= sc.nextInt();
+        int arr[] = new int[n];
+        //taking values from user
+        System.out.println("Please enter array values");
+        for(int i=0; i<arr.length; i++){
+            arr[i] = sc.nextInt();
+        }
+        //even and odd sum
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                evensum=evensum +arr[i];
+            }
+            else{
+                oddsum=oddsum+ arr[i];
+            }
+        }
+        System.out.println("even number sum:" + evensum);
+        System.out.println("odd number sum:" + oddsum);
+    }
+}*/
+
+//dealing with range
+/* 
+import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int evensum=0;
+        int oddsum=0;
+        for(int i=1 ;i<=n ;i++){
+            if(i%2==0){
+                evensum= (evensum + i);
+            }
+            else{
+                oddsum=(oddsum+i);
+            }
+        }
+        System.out.println("even number sum:" + evensum);
+        System.out.println("odd number sum:" + oddsum);
+
+    }
+}
+
+*/
+
+
+
+//Sum of all factors of a number
+/* 
+import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1; i<=n ;i++){
+            if(n%i==0){
+                sum =(sum + i);
+            }
+        }
+        System.out.println("Sum of all factors :" + sum);
+    }
+}
+*/
+
+
+//Print all the numbers which are either divisible by 3 or 5 in a range 
+
+/* 
+import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1; i<=n ; i++){
+            if(i%3==0 || i%5==0){
+                System.out.print(i + " ");
+            }
+        }
+    }
+}*/
+
+
+
+//Print all the factors of a number 
+/* 
+import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1; i<=n; i++){
+            if(n%i == 0){
+                System.out.print(i + " ");
+            }
+        }
+    }
+}*/
+
+
+//Factorial of a number
+/* 
+import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int factorial=1;
+        for(int i=n ; i>=1 ; i--){
+            factorial=(factorial*i);
+        }
+        System.out.println("Factorial of a number:" + factorial);
+    }
+}
+*/
+
+//Sum of digits of a number ,936=18
+
+/*import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter input");
+        int n = sc.nextInt();
+        int sum =0;
+        int value = 0;
+        while(n>0) //(n!=0) 
+        {
+            value =n%10;
+            n=n/10;
+            sum=sum+value;
+        }
+        System.out.println(sum);
+    }
+}*/
+
+
+//Prime Number
+
+/*import java.util.*;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("please enter input number");
+        int input = sc.nextInt();
+        if(input==2){
+            System.out.println("Number is: Prime");
+        }
+        else{
+            for(int i=2; i<=input-1; i++){
+                if(input%i==0){
+                    System.out.println("Number is: Not Prime");
+                    return;
+                }
+            }
+            System.out.println("Number is: Prime");
+        }
+    }
+}*/
+
+//Reverse Number
+
+/*import java.util.*;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        System.out.println("Please enter input");
+        int input = sc.nextInt();
+        int reverse = 0;
+        while(input>0){
+            int lastdigit = input%10;
+            input = input/10;
+            reverse =(reverse*10) + lastdigit;
+        }
+        System.out.println("Reverse is:" + reverse);
+    }
+}*/
+
+//Palindrome Number- Number and its reverse are equal
+
+/*import java.util.*;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int rev =0;
+        int newl =n;
+    
+        while(n>0){
+            int lastdigit = n%10;
+            rev = (rev*10)  + lastdigit;
+            n=n/10;
+        }
+
+        if(newl==rev){
+            System.out.println("Palindrome");
+        }
+        else
+        System.out.println("Not a palindrome");
+    }
+}*/
+
+//Armstrong Number- Sum of cube of all digits will be equal to original number
+
+/*import java.util.Scanner;
+
+public class Basics
+{
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int temp= num;
+        double sum=0;
+
+        for(; num>0; num=num/10)
+        {
+            int lastdigit= num%10;
+            double num2 = Math.pow(lastdigit ,3);
+            sum= sum+num2;
+        }
+        if(sum==temp)
+        {
+            System.out.println("Number is Armstrong");
+        }
+        else
+        {
+            System.out.println("Number is  not Armstrong");
+        }
+    }
+}*/
+
+
+//Perfect number- A number whose sum of factors(excluding number itself)
+/*
+import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+        int sum =0;
+        for(int i=1; i<input; i++){
+            if(input%i==0){
+                sum =sum +i;
+               
+            }
+      
+        }
+        if(input==sum){
+            System.out.println("Number is perfect");
+        }
+        else{
+            System.out.println("Number is not perfect");
+        }
+    }
+}
+*/
+
+//Strong number - Sum of factorial of each digit is equal to original number//
+
+/*import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Please enter input");
+        int n = sc.nextInt();
+        int fake = n;
+        int sum =0;
+       
+        while(n>0){
+            int lastdigit = n%10;
+            int factorial = 1;
+            n = n/10;
+            for(int i =lastdigit; i>=1; i--){
+                factorial = (factorial* i) ;
+            }
+            sum = sum + factorial;
+        }
+
+        if(sum == fake){
+            System.out.println("Number is Strong");
+        }
+        else{
+            System.out.println("Not Strong");
+        }
+    }
+}*/
+
+
+//Harshad number -Number completely divisible by sum of its digits.
+
+/*import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter input");
+        int n= sc.nextInt();
+        int fake =n;
+        int sum = 0;
+        while(n>0){
+            int lastdigit = n%10;
+            n=n/10;
+            sum = sum + lastdigit;
+        }
+        if(fake%sum==0){
+            System.out.println("Harshad number");
+        }
+        else{
+            System.out.println("False");
+        }
+    }
+}*/
+
+//fibonacci series
+
+/*import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1=0;
+        int n2 =1;
+        System.out.print(n1 + " " + n2 + " ");
+        for(int i=3;i<=50;i++){
+            int n =(n1 + n2);
+            System.out.print(n + " ");
+            n1=n2;
+            n2=n;
+        }
+    }
+}*/
+
+
+
+//HCF HIGHEST COMMON FACTOR -Biggest Common Factor
+
+/*import java.util.Scanner;
+public class Basics{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter small number");
+        int n1=sc.nextInt();
+        System.out.println("enter big number");
+        int n2=sc.nextInt();
+        int result = 0;
+
+        for(int i=1 ; i<=n1; i++){
+            if(n1%i==0 && n2%i == 0){
+                result = i;
+            }
+        }
+        System.out.println(result);
+    }
+}*/
+
+
+
+
