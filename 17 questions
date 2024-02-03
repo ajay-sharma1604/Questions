@@ -297,7 +297,8 @@ public class Basics
 }*/
 
 
-//Perfect number- A number whose sum of factors(excluding number itself)
+//Perfect number- A number whose sum of factors(excluding number itself) =number
+
 /*
 import java.util.Scanner;
 public class Basics{
