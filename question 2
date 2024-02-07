@@ -287,7 +287,7 @@ public class Basics{
     }
 }
 
-47)Find greatest elemwnt and print its index too
+47)Find greatest element and print its index too
 
 import java.util.Scanner;
 public class Basics{
