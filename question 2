@@ -287,4 +287,29 @@ public class Basics{
     }
 }
 
-47)
+47)Find greatest elemwnt and print its index too
+
+import java.util.Scanner;
+public class Basics{
+
+    public static void greatestelement(int arr[]){
+        int max =arr[0];
+        int index= 0;
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]>max){
+                max =arr[i];
+                index=i;
+            }
+        }
+        System.out.print("Max Element = " + max + " "+"Found at Index : " + index );
+        
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int arr[] = new int[sc.nextInt()];
+        for(int i=0;i<arr.length;i++){
+            arr[i] = sc.nextInt();
+        }
+        greatestelement(arr);
+    }
+}
