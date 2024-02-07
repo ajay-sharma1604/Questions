@@ -23,20 +23,25 @@ public class Basics{
 
 ---------------40) Find the sum of series 1 + 11 + 111 + 1111 ...n terms
 
+
 import java.util.Scanner;
  public class Basics{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        double result= 0;
+        int result= 0;
+        int sum = 0;
         int n=sc.nextInt();
-        for(int i=0;i<=n;i++){
-            double power= Math.pow(10, i);
+        for(int i=0;i<n;i++){
+            int power= (int)Math.pow(10, i);
             result =result + power;
+            sum=sum+result;
             System.out.print(result + " " );
-            if(i<=n){
+            if(i<n-1){
                 System.out.print("+");
             }
         }
+        System.out.println();
+        System.out.println("sum is :- " + sum);
     }
 }
 
