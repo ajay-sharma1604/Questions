@@ -226,3 +226,41 @@ public class Basics{
 }
 }
 
+
+45) take size from user, make array ,take input from user, sum in this manner: 10+20+30 = 60
+
+import java.util.Scanner;
+public class Basics{
+
+    //taking input
+    public static void input(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            Scanner sc = new Scanner(System.in);
+            arr[i]=sc.nextInt();
+        }
+        sum(arr);
+    }
+
+    //sum of array
+    public static void sum(int arr[]) {
+        int sum = 0;
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+            if(i<arr.length-1){
+                System.out.print("+" + " ");
+            }
+            sum =sum + arr[i];
+        }
+        System.out.print("=" + " ");
+        System.out.print(sum);
+
+    }
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter size");
+        //creating n size array
+        int arr[] = new int[sc.nextInt()];
+        input(arr);
+    }
+}
+
