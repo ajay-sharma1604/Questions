@@ -372,3 +372,33 @@ public class Basics{
     }
 }
 
+50) Palindromic array
+
+import java.util.Scanner;
+public class Basics{
+
+    public static boolean palindromicarr(int arr[]){
+      int start = 0;
+      int end = arr.length-1;
+      while(start<end){
+        //false condtion check
+        if(arr[start]!= arr[end]){
+            return false;
+        }
+        else{
+            start++;
+            end--;
+        }
+      }
+      return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int arr[] = new int[sc.nextInt()];
+        for(int i=0;i<arr.length;i++){
+            arr[i] = sc.nextInt();
+        }
+        boolean result=palindromicarr(arr);
+        System.out.println(result);
+    }
+}
