@@ -432,3 +432,34 @@ public class Basics{
        
     }
 }
+
+
+52) Right Rotation of Array By 1
+
+
+import java.util.Scanner;
+public class Basics{
+
+    public static void rightrotationarr(int arr[]){
+       int temp=arr[arr.length-1];
+       for(int i =arr.length-1; i>0;i--){
+        arr[i] = arr[i-1];
+       }
+       arr[0] = temp;
+
+       //printing array
+       for(int i=0;i<arr.length;i++){
+        System.out.print(arr[i] + " ");
+       }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size");
+        int arr[] = new int[sc.nextInt()];
+        for(int i=0;i<arr.length;i++){
+            arr[i] = sc.nextInt();
+        }
+        rightrotationarr(arr);
+       
+    }
+}
