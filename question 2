@@ -511,3 +511,55 @@ public class Basics {
     }
 }
 
+54) Left Rotate by K elemennts
+
+import java.util.Scanner;
+public class Basics{
+
+     public static void leftRotatek(int arr[],int k){
+          int n = arr.length;
+          k=k%n;
+          reverseArray(arr, 0 , k-1);
+          System.out.println("first: Reverse full array ");
+          printArray(arr);
+          System.out.println();
+          reverseArray(arr, k , n-1);
+          System.out.println("second: Reverse initial half upto k-1");
+          printArray(arr);
+          System.out.println();
+          reverseArray(arr, 0, n-1);
+          System.out.println("Final output: Reverse other half of array");
+          printArray(arr);
+     }
+
+     public static void reverseArray(int arr[] ,int start, int end ){
+          while(start<end){
+               int temp = arr[end];
+               arr[end] = arr[start];
+               arr[start]= temp;
+               start++;
+               end--;
+          }
+         
+     }
+
+     public static void printArray(int arr[]){
+          for(int i=0;i<arr.length;i++){
+               System.out.print(arr[i] +" ");
+          }
+     }
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter array size");
+        int arr[] = new int[sc.nextInt()];
+        System.out.println("Enter array elements");
+        for(int i=0;i<arr.length;i++){
+          arr[i] =sc.nextInt();
+        }
+        System.out.println("Enter k");
+        int k =sc.nextInt();
+     
+        leftRotatek(arr,k);
+
+     }
+}
