@@ -473,6 +473,7 @@ public class Basics {
 
     public static void rightRotateK(int arr[],int k){
         int n=arr.length;
+        k = k%n; //adjusting k when k >n
         reversearray(arr,0,n-1); //full array reverse
         reversearray(arr, 0, k-1); //first half reverse
         reversearray(arr, k, n-1); //seconf half reverse
