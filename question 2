@@ -565,7 +565,7 @@ public class Basics{
 }
 
 
-55) Linear Search an array(if element found return index ,otherwise -1)
+55) Linear Search an array(if element found print index ,otherwise -1)
 
 import java.util.Scanner;
 public class Basics{
@@ -593,3 +593,4 @@ public class Basics{
      }
 }
 
+56) Binary Search an array(if element found print index,otherwise -1)
