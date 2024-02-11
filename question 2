@@ -563,3 +563,33 @@ public class Basics{
 
      }
 }
+
+
+55) Linear Search an array(if element found return index ,otherwise -1)
+
+import java.util.Scanner;
+public class Basics{
+
+     public static void linearsearch(int arr[] , int k){
+          for(int i=0;i<arr.length;i++){
+               if(k==arr[i]){
+                    System.out.println(i); 
+                    return;
+               }
+          }
+          System.out.println(-1);
+     }
+     public static void main(String[] args){
+          Scanner sc = new Scanner(System.in);
+          System.out.println("Enter array size");
+          int arr[] = new int[sc.nextInt()];
+          System.out.println("Enter array elements");
+          for(int i=0;i<arr.length;i++){
+               arr[i] = sc.nextInt();
+          }
+          System.out.println("Enter key value");
+          int k= sc.nextInt();
+          linearsearch(arr,k);
+     }
+}
+
