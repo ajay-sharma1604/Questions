@@ -698,3 +698,29 @@ public class Basics{
           bubbleSort(arr);
      }
 }
+
+59) Median of Array
+
+import java.util.Scanner;
+public class Basics{
+
+     public static double medianArray(int arr[]){
+          int length = arr.length;
+           //if array length is odd-return middle element
+          if(length%2!=0){
+               return arr[length / 2];
+          }
+          //if array length is even
+          else{
+               int middle1 = arr[length / 2-1];
+               int middle2 = arr[length / 2];
+               return (double) (middle1+middle2) / 2;
+          }
+
+     }
+     public static void main(String[] args) {
+          int arr[] = {6,5,3,1,8,7,2};
+         double median =  medianArray(arr);
+         System.out.println(median);
+          }
+     }
