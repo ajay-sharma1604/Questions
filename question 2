@@ -701,11 +701,12 @@ public class Basics{
 
 59) Median of Array
 
-import java.util.Scanner;
+import java.util.*;
 public class Basics{
 
      public static double medianArray(int arr[]){
           int length = arr.length;
+          Arrays.sort(arr);
            //if array length is odd-return middle element
           if(length%2!=0){
                return arr[length / 2];
@@ -719,8 +720,9 @@ public class Basics{
 
      }
      public static void main(String[] args) {
-          int arr[] = {6,5,3,1,8,7,2};
+          int arr[] = {6,5,3,1,8,9};
          double median =  medianArray(arr);
          System.out.println(median);
           }
      }
+
