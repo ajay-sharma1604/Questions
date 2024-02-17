@@ -748,3 +748,28 @@ public class Basics{
           occArray(arr, target);
           }
      }
+
+
+61) Print how many times number has appeared in the array
+
+import java.util.*;
+public class Basics{
+    public static void main(String[] args) {
+        int arr[]={1,2,3,3,1,1,1,2,2,8,9};
+
+        //Creating HashMap
+        HashMap<Integer , Integer> map = new HashMap<>();
+    
+        //Inserting pairs in HashMap
+       for(int num: arr){
+          map.put(num,map.getOrDefault(num, 0) + 1);
+       }  
+
+       //print output
+       for(Map.Entry<Integer, Integer> e : map.entrySet()){
+        System.out.print(e.getKey() + "=" + e.getValue() );
+        System.out.println();
+       }
+
+    }
+}
