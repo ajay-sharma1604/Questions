@@ -15,3 +15,22 @@ public class Basics{
     System.out.println(countCh(str));
     }
  }
+
+
+67) Java Program to print a string in reverse
+
+import java.util.*;
+public class Basics{
+
+    public static String reverseStr(String str){
+        String rev ="";
+        for(int i=str.length()-1;i>=0;i--){
+            rev = rev + str.charAt(i);
+        }
+        return rev;
+    }
+    public static void main(String[] args) {
+    String str = "Invention";
+    System.out.println(reverseStr(str));
+    }
+ }
