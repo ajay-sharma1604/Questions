@@ -52,3 +52,33 @@ public class Basics{
     System.out.println(copyStr(str));
     }
  }
+
+
+69) Java Program to finf maximum occuring character in a string
+
+import java.util.*;
+public class Basics{
+    
+    public static void main(String[] args) {
+     String str = "iiiibbbbbccd";
+     int arr[] = new int[26];    //26 alphabet 
+     for(int i=0;i<str.length();i++){
+        arr[str.charAt(i)-'a']++;
+     }
+     int max=Integer.MIN_VALUE;
+     int index=0;
+     for(int i=0;i<arr.length;i++){
+        if(arr[i]>max){
+            max=arr[i];
+            index=i;
+        }
+     }
+    
+     System.out.println((char)(index + 'a') + "=" + max);
+     //integer + character = ans =integer
+     //big(integer) will be converted to small(character) via typecasting
+     //small(character) can be converted to big(integer)
+     
+   }
+ }
+
