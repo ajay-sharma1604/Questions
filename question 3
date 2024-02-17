@@ -1,0 +1,17 @@
+66) Java program to count the total number of characters in a string
+
+import java.util.*;
+public class Basics{
+
+    public static int countCh(String str){
+        int count=0;
+        for(int i=0;i<str.length();i++){
+            count = count + 1;
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+    String str = "Invention";
+    System.out.println(countCh(str));
+    }
+ }
