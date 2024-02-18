@@ -152,3 +152,49 @@ public class Basics{
         System.out.println(removeSpace(str));
     }
 }
+
+
+74)Replace the spaces of a string with a specific character . Take specific character and string as input
+
+import java.util.*;
+public class Basics{
+
+    public static String replaceString(String str, char ch){
+        StringBuilder sb = new StringBuilder("");
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)== ' '){
+                sb.append(ch);
+                continue;
+            }
+            sb.append(str.charAt(i));
+        }
+        return sb.toString();
+    }
+    public static void main(String[] args) {
+        System.out.println("Enter String");
+        Scanner sc = new Scanner(System.in);
+        String str = new String(sc.nextLine());
+        System.out.println("Enter character");
+        char ch = sc.next().charAt(0);
+        System.out.println(replaceString(str,ch));
+    }
+}
+
+
+
+
+another method -using replaceAll method
+
+import java.util.*;
+public class Basics{
+
+    public static void main(String[] args) {
+        System.out.println("Enter String");
+        Scanner sc = new Scanner(System.in);
+        String str = new String(sc.nextLine());
+        System.out.println("Enter character");
+        char ch = sc.next().charAt(0);
+       String val= str.replaceAll(" ", ch+"");
+       System.out.println(val);
+    }
+}
