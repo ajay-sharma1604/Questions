@@ -1,3 +1,23 @@
+62)Input a string and print it
+
+import java.util.*;
+public class Basics{
+
+    public static void printString(String str){
+        for(int i=0;i<str.length();i++){
+           System.out.print(str.charAt(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter String ");
+        String str = new String(sc.nextLine());
+         printString(str);
+       
+    }
+}
+
 63) Find the length of a string
 
 import java.util.*;
