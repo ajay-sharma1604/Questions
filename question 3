@@ -240,3 +240,25 @@ public class Basics{
      System.out.println(str1);
     }
 }
+
+70)Find the number of times a given word 'the' appears in the given string
+
+import java.util.*;
+public class Basics{
+
+    public static void main(String[] args) {
+     String str= "i am a sophomore in the second year in the field of cs in the lnct ";
+     String arr[] = str.split(" ");
+     int count =0;
+     for(int i=0;i<arr.length;i++){
+        if(arr[i].equals("the")){
+            count++;
+        }
+     }
+     System.out.println(count);
+     
+    }
+}
+
+//In Java, when comparing strings, you should use the equals() method instead of the == operator. 
+The == operator checks if the two string references point to the same object in memory, while equals() compares the actual content of the strings.
