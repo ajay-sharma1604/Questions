@@ -46,6 +46,21 @@ public class Basics{
 
 64)Seperate the individual Characters from a string
 
+
+import java.util.*;
+public class Basics{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter String ");
+        String str = new String(sc.nextLine());
+        char ch[] = str.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            System.out.println(ch[i]);
+        }
+    }
+}
+
 65) Java Program to print a string in reverse
 
 import java.util.*;
