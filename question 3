@@ -236,7 +236,7 @@ public class Basics{
     public static void main(String[] args) {
      String str1= "ajay";
      String str2="sharma";
-     String str3=str1+ " " + str2;
-     System.out.println(str3);
+     str1=str1+ " " + str2;
+     System.out.println(str1);
     }
 }
