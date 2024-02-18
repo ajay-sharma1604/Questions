@@ -17,7 +17,7 @@ public class Basics{
  }
 
 
-67) Java Program to print a string in reverse
+65) Java Program to print a string in reverse
 
 import java.util.*;
 public class Basics{
