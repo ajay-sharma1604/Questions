@@ -16,6 +16,33 @@ public class Basics{
     }
  }
 
+67) Compare two strings if identical print(identical) else(not identical).
+
+import java.util.*;
+public class Basics{
+
+    public static String compareString(String str1 , String str2){
+        if(str1.length()!= str2.length()){
+            return "Non-identical";
+        }
+        else{
+            for(int i=0;i<str1.length();i++){
+                if(str1.charAt(i)!=str2.charAt(i)){
+                    return "Non-identical";
+                }
+            }
+            return "identical";
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter String 1");
+        String str1 = new String(sc.nextLine());
+        System.out.println("Enter String 2");
+        String str2 = new String(sc.nextLine());
+        System.out.println(compareString(str1,str2));
+    }
+}
 
 65) Java Program to print a string in reverse
 
