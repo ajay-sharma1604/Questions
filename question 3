@@ -44,6 +44,8 @@ public class Basics{
     }
 }
 
+64)Seperate the individual Characters from a string
+
 65) Java Program to print a string in reverse
 
 import java.util.*;
