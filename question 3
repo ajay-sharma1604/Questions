@@ -1,3 +1,27 @@
+63) Find the length of a string
+
+import java.util.*;
+public class Basics{
+
+    public static int stringLength(String str){
+        int count=0;
+        char ch[] = str.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            count++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter String ");
+        String str = new String(sc.nextLine());
+        System.out.println(stringLength(str));
+       
+    }
+}
+
+
 66) Java program to count the total number of characters in a string
 
 import java.util.*;
