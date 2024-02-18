@@ -264,6 +264,8 @@ public class Basics{
 The == operator checks if the two string references point to the same object in memory, while equals() compares the actual content of the strings.
 
 
+71) Find frequency Of Characters,take both as input(String) as well as the char you want to find Frequency of
+
 import java.util.*;
 public class Basics{
 
