@@ -129,3 +129,26 @@ public class Basics{
         System.out.println(joinString(str1,str2));
     }
 }
+
+
+75) Remove the spaces of a string
+
+import java.util.*;
+public class Basics{
+
+    public static String removeSpace(String str){
+        StringBuilder sb = new StringBuilder("");
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)==' '){
+                continue;
+            }
+            sb.append(str.charAt(i));
+        }
+        return sb.toString();
+        
+    }
+    public static void main(String[] args) {
+        String str = "I am ajay sharma   e";
+        System.out.println(removeSpace(str));
+    }
+}
