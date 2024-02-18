@@ -198,3 +198,31 @@ public class Basics{
        System.out.println(val);
     }
 }
+
+
+73) Find the largest and smallest word in a string
+
+import java.util.*;
+public class Basics{
+
+    public static void main(String[] args) {
+       String str = "Marry christmas To all my Friends";
+       String arr[] = str.split(" ");
+       String maxstr ="";
+       String minstr =arr[0];
+       int max=arr[0].length();
+       int min=arr[0].length();
+       for(int i=0;i<arr.length;i++){
+        if(arr[i].length()>max){
+            max= arr[i].length();
+            maxstr=arr[i];
+        }
+        if(arr[i].length()<min){
+            min=arr[i].length();
+            minstr=arr[i];
+        }
+       }
+       System.out.println("Largest word : " + " = " + maxstr);
+       System.out.println("Smallest word :" + " = " + minstr);
+    }
+}
